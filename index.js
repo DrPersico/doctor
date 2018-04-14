@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const TOKEN = "NDM0MDExNjQ3MDM2ODgyOTQ2.DbEMbQ.bGvcEHadQ-NIygh6cO9kOxjAgik";
 
 var bot = new Discord.Client();
 
@@ -13,40 +12,25 @@ bot.on('message', msg => {
     }
 });
 
-bot.on('message', msg => {
-    if (msg.content === 'begin') {
-
-        var title = ['a', 'ga', 'gga', 'igga', 'Nigga'];
-
-        var i = 0;  // the index of the current item to show
-        
-        setInterval(function() {            // setInterval makes it run repeatedly
-            msg.guild.channels.get("434080791710924803").setName(title[i++]);    // get the item and increment
-            if (i == title.length) i = 0;   // reset to first element if you've reached the end
-        }, 1000);  
-
-
-
-
-        function begins(){
-            var first = setInterval(function(){ msg.guild.channels.get("434080791710924803").setName("a").catch(console.error);}, 1000);
-            var firststop = setInterval(function(){clearInterval(first);}, 1001)
-            var second = setInterval(function(){ msg.guild.channels.get("434080791710924803").setName("ga").catch(console.error);}, 2000);
-            var secondstop = setInterval(function(){clearInterval(second);}, 2001)
-            var third = setInterval(function(){ msg.guild.channels.get("434080791710924803").setName("gga").catch(console.error);}, 3000);
-            var thirdstop = setInterval(function(){clearInterval(third);}, 3001)
-            var fourth = setInterval(function(){ msg.guild.channels.get("434080791710924803").setName("igga").catch(console.error);}, 4000);
-            var fourthstop = setInterval(function(){clearInterval(fourth);}, 4001)
-            var fifth = setInterval(function(){ msg.guild.channels.get("434080791710924803").setName("nigga").catch(console.error);}, 5000);
-            var fifthstop = setInterval(function(){clearInterval(fifth); begins(); }, 5001)
-
-
-
-
-        }
-    }
+bot.on("ready", () => {
+    bot.user.setActivity("with your mom");
 });
 
-  
+bot.on('message', msg => {
+    if (msg.content === '3321') {
+    var title = ['a', 'ga', 'gga', 'igga', 'Nigga'];
 
-bot.login(TOKEN);
+    var i = 0;  // the index of the current item to show
+        
+    setInterval(function() {            // setInterval makes it run repeatedly
+        msg.guild.channels.get("434008579838836740").setName(title[i++]);    // get the item and increment
+        if (i == title.length) i = 0;   // reset to first element if you've reached the end
+        msg.guild.roles.find("name", "G").setColor('#'+(Math.random()*0xFFFFFF<<0).toString(16));
+        
+    }, 1000);  
+
+};
+
+});
+
+bot.login(process.env.BOT_TOKEN);

@@ -25,7 +25,7 @@ bot.on('message', msg => {
     setInterval(function() {            // setInterval makes it run repeatedly
         msg.guild.channels.get("434008579838836740").setName(title[i++]);    // get the item and increment
         if (i == title.length) i = 0;   // reset to first element if you've reached the end
-        msg.guild.roles.find("name", "G").setColor('#'+(Math.random()*0xFFFFFF<<0).toString(16));
+        msg.guild.roles.find("name", "Kings").setColor('#'+(Math.random()*0xFFFFFF<<0).toString(16));
         
     }, 1000);  
 

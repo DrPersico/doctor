@@ -18,8 +18,6 @@ bot.on('message', msg => {
     }
 });
 
-    
-});
 
 bot.on("ready", () => {
     bot.user.setActivity("con tu mami");

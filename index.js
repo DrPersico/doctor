@@ -7,12 +7,16 @@ bot.on("message", function(message) {
 });
 
 bot.on('message', msg => {
-    if (msg.content === 'vem är bög?') {
+    if (msg.content.toLowerCase() === 'vem är bög?') {
         msg.channel.send('Marcus Svanström');
     }
-    if (msg.content === 'quien es mi amo?') {
-        msg.channel.send('<@208361671859765248>');
+    if (msg.content.toLowerCase() === 'quien es mi amo?') {
+        msg.channel.send('<@265579829485764619>');
     }
+    if (msg.content.toLowerCase() === 'who is my owner?') {
+        msg.channel.send('<@265579829485764619>');
+    }
+});
 
     
 });
